@@ -9,6 +9,7 @@ jobs:
     build:
         permissions:
             packages: write
+            contents: read
         strategy:
             matrix:
                 bw_version:
