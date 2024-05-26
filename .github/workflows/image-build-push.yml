@@ -29,6 +29,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository }}:BW_VERSION
+          tags: ghcr.io/${{ github.repository }}:${{ github.event.inputs.version }}
           build-args: |
             BW_VERSION=${{ github.event.inputs.version }}

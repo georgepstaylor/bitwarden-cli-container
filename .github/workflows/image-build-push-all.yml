@@ -11,10 +11,12 @@ jobs:
         strategy:
             matrix:
                 image:
-                    - v2024.4.1
-                    - v2024.3.1
+                    - "2024.4.1"
+                    - "2024.3.1"
         steps:
-        - name: Build images
-          uses: ./.github/workflows/image-build-push.yml
-          with:
-            version: ${{ matrix.image }}
+          - name: Checkout
+            uses: actions/checkout@v3
+          - name: Build images
+            uses: ./.github/workflows/image-build-push.yml
+            with:
+                version: ${{ matrix.image }}
