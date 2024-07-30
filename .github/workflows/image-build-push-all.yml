@@ -13,8 +13,8 @@ jobs:
         strategy:
             matrix:
                 bw_version:
-                    - "v2024.6.1"
-                    - "v2024.7.1"
+                    - "2024.6.1"
+                    - "2024.7.1"
         uses: ./.github/workflows/image-build-push.yml
         with:
             version: ${{ matrix.bw_version }}
